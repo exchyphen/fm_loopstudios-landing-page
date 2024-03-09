@@ -1,0 +1,35 @@
+:root {
+  /* colors */
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%);
+  --dark-gray: hsl(0, 0%, 55%);
+  --very-dark-gray: hsl(0, 0%, 41%);
+
+  /* fonts */
+  --std-font: "Alata", sans-serif;
+  --header-font: "Josefin Sans", sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+  margin: 0;
+
+  font-size: 15px;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100svh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#root {
+  width: 100%;
+}
