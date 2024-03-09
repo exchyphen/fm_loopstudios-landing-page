@@ -8,6 +8,7 @@
 .header-font {
     font-family: var(--header-font);
     font-weight: 300;
+    text-transform: uppercase;
 }
 
 .nav-container {
@@ -17,6 +18,10 @@
 
 .nav-item {
     color: var(--white);
+}
+
+h2 {
+    font-size: 3rem;
 }
 
 a {
@@ -80,9 +85,92 @@ a:visited {
     padding: 2rem;
 
     font-size: 5rem;
-    text-transform: uppercase;
     border: 2px solid var(--white);
 }
+
+/* description */
+
+.description {
+    padding: 6rem 10%;
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.description__hgroup {
+    width: 50%;
+    min-width: 600px;
+    background: var(--white);
+    padding: 6rem;
+    padding-bottom: 0;
+
+    position: absolute;
+    right: 6rem;
+    bottom: 6rem;
+}
+
+.description__text {
+    color: var(--dark-gray);
+}
+
+/* creations */
+
+.creations {
+    padding: 6rem 10%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.creations__hgroup {
+    display: flex;
+    justify-content: space-between;
+}
+
+.creations__button {
+    padding: 0 2rem;
+    border: 1px solid var(--black);
+    background: var(--white);
+    color: var(--black);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.creations__button:hover {
+    cursor: pointer;
+    background: var(--black);
+    color: var(--white);
+}
+
+
+.creations__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.grid__item {
+    position: relative;
+}
+
+.grid__img {
+    filter: brightness(0.7);
+}
+
+.grid__title {
+    width: 100%;
+    color: var(--white);
+    font-size: 2.5rem;
+    padding: 0 2rem;
+    
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 
 /* footer */
 
@@ -140,4 +228,44 @@ a:visited {
     justify-content: center;
     align-items: flex-start;
     gap: 4px;
+}
+
+/* mobile menu */
+
+.menu {
+    width: 100%;
+    height: 100%;
+    background: var(--black);
+
+    padding :3rem;
+
+    position: fixed;
+    z-index: 1;
+}
+
+.menu__hgroup {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu__close:hover {
+    cursor: pointer;
+}
+
+.menu__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    text-transform: uppercase;
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.menu__nav-item {
+    height: 3.5rem;
+    font-size: 2.5rem;
 }
