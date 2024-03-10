@@ -162,7 +162,11 @@ function App() {
         <article className="description">
           <img
             className="description__img"
-            src={InteractiveDesktop}
+            src={
+              windowWidth > mobileBreakpoint
+                ? InteractiveDesktop
+                : InteractiveMobile
+            }
             alt="description img"
           ></img>
           <hgroup className="description__hgroup">
@@ -180,9 +184,15 @@ function App() {
         <article className="creations">
           <hgroup className="creations__hgroup">
             <h2 className="header-font">our creations</h2>
-            <button className="creations__button std-font">see all</button>
+            {windowWidth > mobileBreakpoint ? (
+              <button className="creations__button std-font">see all</button>
+            ) : null}
           </hgroup>
           <div className="creations__grid">{createGridItems()}</div>
+
+          {windowWidth > mobileBreakpoint ? null : (
+            <button className="creations__button std-font">see all</button>
+          )}
         </article>
       </main>
       <footer className="footer">
